@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+     
+   <extension point="org.eclipse.wst.sse.ui.editorConfiguration">      
+      <sourceViewerConfiguration
+            class="org.prado.ide.editor.contentassist.PradoEditorSourceViewerConfiguration"
+            target="org.prado.ide.prado-type">
+      </sourceViewerConfiguration>
+   </extension>
+   
+   <extension point="org.eclipse.core.contenttype.contentTypes"
+         id="org.prado.ide.contentassist.contentType">
+         <content-type
+               id="prado-type"
+               name="Prado Page Type"
+               priority="normal"
+               base-type="org.eclipse.wst.html.core.htmlsource"
+               file-extensions="page">
+         </content-type>         
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="Prado Editor Preferences"
+            class="org.prado.ide.editor.preferences.PradoEditorPreferencePage"
+            id="org.prado.ide.editor.preferences.PradoEditorPreferencePage">
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.prado.ide.editor.preferences.PradoEditorPreferenceInitializer">
+      </initializer>
+   </extension>
+ 
+</plugin>

@@ -1,0 +1,6 @@
+title=//title/text()
+namespace=//div[@id='main']/div[@class='doc-namespace']/a
+properties=//div[@id='main']/div[@class='doc-properties']/table/tr
+events=//div[@id='main']/div[@class='doc-events']/table/tr
+methods=//div[@id='main']/div[@class='doc-methods']/table/tr
+subclasses=//div[@id='main']/div[@class='doc-derived']/ul/li

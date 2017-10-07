@@ -1,0 +1,92 @@
+  
+   <!-- 
+   
+   <extension point="org.eclipse.wst.sse.ui.editorConfiguration">      
+      <sourceViewerConfiguration
+            class="org.prado.ide.editor.contentassist.PradoEditorSourceViewerConfiguration"
+            target="org.prado.ide.prado-type">
+      </sourceViewerConfiguration>
+   </extension>
+   
+   <extension point="org.eclipse.core.contenttype.contentTypes"
+         id="org.prado.ide.editor.contentassist.contentType">
+         <content-type
+               id="prado-type1"
+               name="Prado Editor File Extension"
+               priority="normal"
+               base-type="org.eclipse.wst.html.core.htmlsource"
+               file-extensions="pagd">
+         </content-type>         
+   </extension>
+   
+   
+ 
+   -->
+  <extension point="org.eclipse.wst.sse.ui.editorConfiguration">
+      <!-- The content type ID created by that extension point automatically prefixes the plug-in ID 
+      	So the "sourceViewerConfiguration" target attribute must be in this format:
+      	<PLUGIN_ID>.<CONTENT-TYPE-ID>
+      	The plugin id is obtained from MANIFEST>MF from "Bundle-SymbolicName"
+      -->
+      <sourceViewerConfiguration
+            class="org.prado.ide.editor.contentassist.PradoEditorSourceViewerConfiguration"
+            target="org.prado.ide.rob-type">
+      </sourceViewerConfiguration>
+   </extension>
+   <extension point="org.eclipse.core.contenttype.contentTypes"
+         id="org.eclipsecon.tutorial371example.contentassist.contentType">
+         <content-type
+               id="rob-type"
+               name="The content type of Rob"
+               priority="normal"
+               base-type="org.eclipse.wst.html.core.htmlsource"
+               file-extensions="rib">
+         </content-type>
+         
+   </extension>
+   
+   
+   
+    <extension point="org.eclipse.wst.sse.ui.editorConfiguration">      
+      <sourceViewerConfiguration
+            class="org.prado.ide.editor.contentassist.BobSourceViewerConfiguration"
+            target="org.prado.ide.rob-type">
+      </sourceViewerConfiguration>
+   </extension>
+   <extension point="org.eclipse.core.contenttype.contentTypes"
+         id="org.prado.ide.contentassist.contentType">
+         <content-type
+               id="rob-type"
+               name="Prado Editor Content Type"
+               priority="normal"
+               base-type="org.eclipse.core.runtime.xml"
+               file-extensions="page">
+         </content-type>         
+   </extension>
+   
+   
+   
+   //		IContentAssistProcessor[] nn = super.getContentAssistProcessors(
+//				sourceViewer, partitionType);
+//
+//		
+//		IContentAssistProcessor[] nn1;
+//		
+//		try {
+//					
+//		IContentAssistProcessor pr = new PradoEditorContentAssistProcessor();
+//		if (nn == null) {
+//			nn1 = new IContentAssistProcessor[1];
+//			nn1[0] = pr;
+//		} else {
+//			nn1 = new IContentAssistProcessor[nn.length + 1];
+//			System.arraycopy(nn, 0, nn1, 0, nn.length);
+//			nn1[nn.length] = pr; 
+//		}
+//		
+//		return nn1;
+//
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//		return nn;
